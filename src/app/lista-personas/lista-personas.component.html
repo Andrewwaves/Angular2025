@@ -1,0 +1,28 @@
+<input type="text" name="filtroNombre" [(ngModel)]="filtroNombre"/>
+<input type="button" value="🔎"(click)="filtrar()"/>
+<table>
+    <tr *ngFor="let persona of listaPersonas">
+        <td>{{persona.nombre}}</td>
+        <td>{{persona.apellidos}}</td>
+        <td>{{persona.edad}}</td>
+        <td><input type="button" value="🗑️"(click)="borrar(persona.nombre)"/></td>
+    </tr>
+    <tr *ngIf="finDeLista">
+        <td colespan="3">No hay registros</td>
+    </tr>
+</table>
+<form>
+    <p>
+        Nombre: <input type="text" name="nombre" [(ngModel)]="personaInsertar.nombre"/>
+    </p>
+    <p>
+        Apellidos: <input type="text" name="apellidos" [(ngModel)]="personaInsertar.apellidos"/>
+    </p>
+    <p>
+        Edad: <input type="text" name="edad" [(ngModel)]="personaInsertar.edad"/>
+    </p>
+    <p>
+        <input type="button" value="insertar" (click)="insertar()"/>
+    </p>
+
+</form>
