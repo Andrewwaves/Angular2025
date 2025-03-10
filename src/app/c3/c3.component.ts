@@ -1,16 +1,13 @@
 import { Component } from '@angular/core';
-import { Persona } from '../persona';
 
 @Component({
   selector: 'app-c3',
   imports: [],
   templateUrl: './c3.component.html',
-  styleUrl: './c3.component.css'
+  styleUrl: './c3.component.scss'
 })
 export class C3Component {
-  persona:Persona;
-  constructor(){
-    this.persona=new Persona("Andrea","Canales",24);
-  }
+
+  listaNombres:string[]=["pepe","ana","sam"];
 
 }

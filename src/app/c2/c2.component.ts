@@ -5,16 +5,10 @@ import { Component } from '@angular/core';
   selector: 'app-c2',
   imports: [NgFor],
   templateUrl: './c2.component.html',
-  styleUrl: './c2.component.css'
+  styleUrl: './c2.component.scss'
 })
 export class C2Component {
 
-  listaNombres:String[]=[];
-
-  pulsame(){
-    //alert("has pulsado");
-    this.listaNombres.push("Andrea");
-    
-  }
+  listaNombres:string[]=["pepe","ana","sam"];
 
 }

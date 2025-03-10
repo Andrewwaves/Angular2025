@@ -1,0 +1,12 @@
+<table class="table">
+    @for(libro of listaLibros; track libro.isbn){
+        <tr>
+            <td>{{libro.isbn}}</td>
+            <td>{{libro.titulo}}</td>
+            <td>{{libro.autor}}</td>
+            <td>{{libro.paginas}}</td>
+            <td [routerLink]="['/detallelibro',libro.isbn]">Detalles</td>
+        </tr>
+    }
+    </table>
+    <a routerLink="/formulariolibros">Formulario</a>

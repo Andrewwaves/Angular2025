@@ -1,14 +1,20 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-c1',
   imports: [],
   templateUrl: './c1.component.html',
-  styleUrl: './c1.component.css'
+  styleUrl: './c1.component.scss'
 })
 export class C1Component {
 
-  nombre:String="Andrea";
-  
-}
+  numero:number=0;
+  incrementar(){
+    this.numero++;
+  }
+  decrementar(){
+    this.numero--;
+  }
+
+  }
+

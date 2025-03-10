@@ -1,4 +1,7 @@
-
-<p>{{persona.nombre}}</p>
-<p>{{persona.apellidos}}</p>
-<p>{{persona.edad}}</p>
+<ul>
+    @for (nombre of listaNombres; track nombre){
+        <li> {{nombre}}</li>
+    }@empty {
+        <li>no hay items</li>
+    }
+</ul>
