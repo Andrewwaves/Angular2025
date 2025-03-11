@@ -1,0 +1,17 @@
+<caption class="h3">LISTA DE PRÉSTAMOS</caption>
+<table class="table">
+    <tr>
+        <th>ISBN</th>
+        <th>Numero de Préstamo</th>
+        <th>Disponibilidad</th>
+    </tr>
+    @for(ejemplar of listaEjemplares; track ejemplar.isbn){
+        <tr>
+            <td>{{ejemplar.isbn}}</td>
+            <td>{{ejemplar.numero}}</td>
+            <td>{{ejemplar.disponible}}</td>
+            <td><button class="btn btn-danger" (click)="borrar(ejemplar.isbn, ejemplar.numero)">Borrar</button></td>
+        </tr>
+    }
+    </table>
+    <a routerLink="/formularioejemplares">Formulario</a>
